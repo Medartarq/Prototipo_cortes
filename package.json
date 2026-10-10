@@ -1,0 +1,13 @@
+{
+  "name": "indesaco-estudio-de-cortes",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Solicitud de cortes y optimización de tableros en el navegador",
+  "scripts": {
+    "start": "node server.mjs",
+    "build": "node build.mjs",
+    "test": "node --test tests/*.test.mjs"
+  },
+  "engines": { "node": ">=20" }
+}

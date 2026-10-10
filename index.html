@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="es">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#083858"><meta name="description" content="Prepara solicitudes de corte en melamina. Importa piezas de OpenCutList, organiza materiales y exporta tus documentos."><title>Indesaco · Estudio de cortes</title><link rel="icon" href="assets/logo.png"><link rel="stylesheet" href="styles.css"></head>
+<body>
+<aside class="sidebar">
+ <a class="brand" href="#proyecto" aria-label="Indesaco, inicio"><img src="assets/logo.png" alt="Logo Indesaco"><div><strong>INDESACO</strong><span>Estudio de cortes</span></div></a>
+ <div class="nav-caption">TU PROYECTO</div>
+ <nav aria-label="Etapas del proyecto" id="navigation"></nav>
+ <div class="sidebar-footer"><span class="status-dot"></span>Tu trabajo, en tu navegador<p>Sin cuentas ni historial.<br>Descarga el proyecto para retomarlo.</p><span class="edition">INDESACO / 01</span></div>
+</aside>
+<div class="workspace">
+ <header class="topbar"><div><span class="crumb">PROYECTO</span><strong id="project-title">Nueva solicitud</strong></div><div class="top-actions"><button class="button subtle" id="reset">Nueva solicitud</button><button class="button outline" id="save-project">Guardar proyecto</button></div></header>
+ <main id="main" tabindex="-1"></main>
+ <footer class="site-footer"><span>Diseñado para llevar tus ideas al taller.</span><span>Milímetros · Melamina</span></footer>
+</div>
+<div id="toast" role="status" aria-live="polite"></div>
+<dialog id="piece-dialog" aria-labelledby="piece-title"><form id="piece-form"><div class="dialog-head"><div><span class="eyebrow">DESPIECE</span><h2 id="piece-title">Agregar pieza</h2></div><button type="button" class="icon-button" data-close aria-label="Cerrar">×</button></div><div id="piece-fields"></div><div class="dialog-footer"><button type="button" class="button outline" data-close>Cancelar</button><button class="button primary" type="submit">Guardar pieza</button></div></form></dialog>
+<input type="file" id="csv-input" accept=".csv,text/csv" hidden>
+<input type="file" id="project-input" accept=".json,.indesaco" hidden>
+<script src="vendor/exceljs.min.js"></script><script src="vendor/jspdf.umd.min.js"></script><script src="vendor/jszip.min.js"></script><script type="module" src="app.mjs"></script>
+</body></html>
